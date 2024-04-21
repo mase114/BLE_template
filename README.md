@@ -10,7 +10,7 @@ BLEはBluetooth Low Energyの略で、低消費電力の無線通信技術です
 
 ## UUIDの設定方法
 
-```python
+```python:Central_template.py
 # Switch Service UUID
 _SWITCH_SERVICE_UUID = ubluetooth.UUID("変更")
 
@@ -26,13 +26,7 @@ _SWITCH_SERVICE = (
 )
 ```
 
->sdds
->sefse
->dssd
->>dssd
->
->sefse
->>>sdsd
+
 
 ## Requirement
 

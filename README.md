@@ -26,7 +26,7 @@ _SWITCH_SERVICE = (
 )
 ```
 
-`wwww`
+print 'wwww'
 
 ## Requirement
 

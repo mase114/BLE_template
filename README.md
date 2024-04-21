@@ -49,6 +49,7 @@ _SWITCH_SERVICE = (
 I/O(入出力)ピンは、マイコンチップ上の物理的な端子であり、外部のデバイスや回路との接点です。
 これらのピンは、マイコンが外部と通信し、制御するための主要な手段です。
 詳しくは MicroPython ライブラリ machine---ハードウェア関連の関数を参照
+
 [クラス Pin -- I/O ピンの制御](https://micropython-docs-ja.readthedocs.io/ja/latest/library/machine.Pin.html)
 
 ### 例
@@ -57,8 +58,8 @@ I/O(入出力)ピンは、マイコンチップ上の物理的な端子であり
 
 入力設定 Pin(25,Pin.IN,Pin.PULL_DOWN)
 
-*番号はピン番号
-*プルアップの場合は PULL_UP に変更
+`番号はピン番号`
+`プルアップの場合は PULL_UP に変更`
 
 ## Usage
 

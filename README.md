@@ -93,8 +93,42 @@ struct.unpack()の第一引数は、データのフォーマットを示す文�
 
 `””は削除しない`
 
-## Features
+## スイッチの動作処理
 
-## Reference
+```python
+# スイッチ動作処理
+def switch_value(sw):
+  #print("read switch" ,sw) #スイッチ入力確認
+"""
+スイッチ動作処理
+"""
+```
+
+### 解説
+
+スイッチの動作処理を行う関数です。スイッチの入力を確認して特定の処理を行います。
+スイッチ入力を監視したい場合は、#print("read switch" ,sw)の#を削除します。プログラム完成後は、必 ずコメントに戻すこと。`(動作が重くなる為)`
+スイッチ値は sw[0]〜sw[n]まで変数の中に格納されます。例えば、3つのスイッチの場合は sw[0]〜 sw[2]までの変数です。
+
+### 例
+
+タクトスイッチが押されている間だけ内蔵 LED を点灯させる。
+
+```python
+if sw[0] == 1:
+  led.on()
+else:
+  led.off()
+```
+
+## 注意事項
+
+マイコンに書き込む場合、"template.py" → "main.py"に変更。
+
+ble_advertising.py を同じディレクトリ内に保存。
+
+Switch Service UUID and Switch Characteristic UUID の値を変更。(他機体と同値禁止) Switch Service UUID and Switch Characteristic UUID の値を 
+
+Peripheral 側と同値 動作させる場合、スイッチ入力確認をコメントにしておく
 
 ## Author

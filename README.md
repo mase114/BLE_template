@@ -16,10 +16,13 @@ _SWITCH_SERVICE_UUID = ubluetooth.UUID("変更")
 
 # Switch Characteristic UUID
 _SWITCH_CHAR = (
-ubluetooth.UUID("変更"),
-ubluetooth.FLAG_READ | ubluetooth.FLAG_NOTIFY, )
+  ubluetooth.UUID("変更"),
+  ubluetooth.FLAG_READ | ubluetooth.FLAG_NOTIFY,
+)
 
-_SWITCH_SERVICE = ( _SWITCH_SERVICE_UUID, (_SWITCH_CHAR),
+_SWITCH_SERVICE = (
+  _SWITCH_SERVICE_UUID,
+  (_SWITCH_CHAR),
 )
 ```
 

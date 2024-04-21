@@ -13,9 +13,12 @@ BLEはBluetooth Low Energyの略で、低消費電力の無線通信技術です
 ```Central_template.py
 # Switch Service UUID
 _SWITCH_SERVICE_UUID = ubluetooth.UUID("変更")
-# Switch Characteristic UUID _SWITCH_CHAR = (
+
+# Switch Characteristic UUID
+_SWITCH_CHAR = (
 ubluetooth.UUID("変更"),
 ubluetooth.FLAG_READ | ubluetooth.FLAG_NOTIFY, )
+
 _SWITCH_SERVICE = ( _SWITCH_SERVICE_UUID, (_SWITCH_CHAR),
 )
 ```

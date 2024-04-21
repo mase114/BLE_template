@@ -61,7 +61,19 @@ I/O(入出力)ピンは、マイコンチップ上の物理的な端子であり
 `番号はピン番号`
 `プルアップの場合は PULL_UP に変更`
 
-## Usage
+## データのフォーマット設定
+
+### 解説
+
+```python
+def _update_value1(self, data):
+  try:
+    self._value1 = struct.unpack("変更", data) #少数の場合は f を使用
+  except OSError as error:
+    print(error)
+  def value1(self):
+    return self._value1
+```
 
 ## Features
 

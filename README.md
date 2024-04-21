@@ -139,3 +139,10 @@ Switch Service UUID and Switch Characteristic UUID の値をPeripheral側と同�
 
 [Central側BLEプログラムコード基本的使い方参照](https://github.com/mase114/BLE_template/blob/main/README.md#uuid%E3%81%AE%E8%A8%AD%E5%AE%9A%E6%96%B9%E6%B3%95)
 
+##I/O ピン入出力設定
+
+[Central側BLEプログラムコード基本的使い方参照]()
+
+`Central 側と通信に使用するスイッチは次のスイッチ入力設定で設定すること。`
+
+

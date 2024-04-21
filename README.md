@@ -141,8 +141,90 @@ Switch Service UUID and Switch Characteristic UUID の値をPeripheral側と同�
 
 ##I/O ピン入出力設定
 
-[Central側BLEプログラムコード基本的使い方参照]()
+[Central側BLEプログラムコード基本的使い方参照](https://github.com/mase114/BLE_template/blob/main/README.md#io-%E3%83%94%E3%83%B3%E5%85%A5%E5%87%BA%E5%8A%9B%E8%A8%AD%E5%AE%9A)
 
 `Central 側と通信に使用するスイッチは次のスイッチ入力設定で設定すること。`
 
+## スイッチ入力設定
 
+```python
+"""
+スイッチ入力設定
+"""
+```
+
+### 解説
+
+Peripheral デバイスとスイッチの接続を管理するための場所。
+基本的には I/O ピン入出力設定と同じ。
+
+### 例
+
+プルダウンのスイッチの場合
+
+`self.switch_pin1 = Pin(0, Pin.IN, Pin.PULL_DOWN)`
+
+AD コンバータを利用する場合
+
+`self.switch_pin2 = ADC(Pin(26))`
+
+`番号はピン番号`
+`例に出ている変数 self.switch_pin の pin の後の番号は、スイッチごとに変えること。`
+
+## スイッチ入力変数
+
+```python
+#スイッチ入力変数
+"""
+変数記入
+"""
+#スイッチ入力確認
+#print("Switch states:", "スイッチの変数を全て記入")
+```
+
+### 解説
+
+self.switch_pin をわかりやすくする為、変数を宣言する。 スイッチ入力を監視したい場合は、#print("Switch states:", `"スイッチの変数を全て記入"`) #を削除します。`"スイッチの変数を全て記入"`の部分に宣言した変数を全て記入する。プログラム完成後 は、必ずコメントに戻すこと。`(動作が重くなる為)`
+
+### 例
+
+`switch_state1 = self.switch_pin1.value()`
+
+AD コンバータを利用する場合
+
+`switch_state2 = round(float((self.switch_pin2.read_u16() / 65535) * 200),3)`
+
+Pico は 16bit であるので 65535 で AD 変換の値を MAX を 200 から 0 とし、小数点第三位まで表示させる。
+
+## データのフォーマット設定
+
+```python
+self._ble.gatts_write(self._handle_switch, struct.pack(“変更”, "スイッチの変数を全て記入"))
+```
+
+### 解説
+
+[Central側BLEプログラムコード基本的使い方参照]()
+
+### 例
+
+整数1つと浮動小数点数1つの場合
+
+`“変更”`→`“<BF”`(Central 側に送信するスイッチの数および種類によって変化) 
+
+`””は削除しない`
+
+
+`"スイッチの変数を全て記入"`→先ほどの#print("Switch states:", `"スイッチの変数を全て記入"`)と同じ。
+
+## 注意事項
+
+マイコンに書き込む場合、"template.py" → "main.py"に変更。
+
+ble_advertising.py を同じディレクトリ内に保存。
+
+Switch Service UUID and Switch Characteristic UUID の値を変更。`(他機体と同値禁止)`
+
+Switch Service UUID and Switch Characteristic UUID の値を Central 側と同値
+
+動作させる場合、スイッチ入力確認をコメントにしておく

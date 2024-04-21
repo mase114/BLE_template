@@ -137,5 +137,5 @@ Switch Service UUID and Switch Characteristic UUID の値をPeripheral側と同�
 
 ## UUIDの設定方法
 
-[Central側BLEプログラムコード基本的使い方参照](## UUIDの設定方法)
+[Central側BLEプログラムコード基本的使い方参照](https://github.com/mase114/BLE_template/blob/main/README.md#uuid%E3%81%AE%E8%A8%AD%E5%AE%9A%E6%96%B9%E6%B3%95)
 

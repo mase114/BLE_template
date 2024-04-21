@@ -6,7 +6,7 @@ BLEはBluetooth Low Energyの略で、低消費電力の無線通信技術です
 
 [BLEについて](https://www.musen-connect.co.jp/blog/course/trial-production/ble-beginner-1/)
 
-# Peripheral側BLEプログラムコード基本的使い方
+# Central側BLEプログラムコード基本的使い方
 
 ## UUIDの設定方法
 
@@ -133,4 +133,9 @@ Switch Service UUID and Switch Characteristic UUID の値をPeripheral側と同�
 
 動作させる場合、スイッチ入力確認をコメントにしておく
 
-## Author
+# Peripheral側BLEプログラムコード基本的使い方
+
+## UUIDの設定方法
+
+[Central側BLEプログラムコード基本的使い方参照](## UUIDの設定方法)
+

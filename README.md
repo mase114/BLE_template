@@ -8,7 +8,7 @@ BLEはBluetooth Low Energyの略で、低消費電力の無線通信技術です
 
 ## UUIDの設定方法
 
-
+[pypy](Central_template.py)
 
 ## Requirement
 

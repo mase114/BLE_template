@@ -71,9 +71,27 @@ def _update_value1(self, data):
     self._value1 = struct.unpack("変更", data) #少数の場合は f を使用
   except OSError as error:
     print(error)
-  def value1(self):
-    return self._value1
+def value1(self):
+  return self._value1
 ```
+
+### 解説
+
+データを解釈して保持し、それを取得するための手段を提供するために使用されます。以下にそれぞれ
+のメソッドの役割と機能を解説します。
+
+`_update_value1(self, data)`
+
+このメソッドは、data という引数を受け取ります。この引数はバイト列(bytes)で、ある種のデータを 含んでいます。
+メソッド内で、struct.unpack() 関数が使われています。これは、バイト列を指定されたフォーマットに 従って解釈し、Python のデータ型に変換するための関数です。
+struct.unpack()の第一引数は、データのフォーマットを示す文字列です。struct.unpack()内はバイト列 がどのように構成されているかを示しています。各文字は特定のデータ型を表し、8 ビット符号なし整数 (B)、および 2 つの 32 ビット浮動小数点数(F)を解釈することを意味します。
+
+### 例
+
+整数1つと浮動小数点数1つの場合
+`“変更”`→`“<BF”`(Peripheral 側から受信するスイッチの数および種類によって変化)
+
+`””は削除しない`
 
 ## Features
 

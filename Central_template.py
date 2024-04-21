@@ -204,7 +204,7 @@ class BLESwitchCentral:
 
 # スイッチ動作処理
 def switch_value(sw):  
-    print("read switch" ,sw)    #スイッチ入力確認
+    #print("read switch" ,sw)    #スイッチ入力確認
     """
     スイッチ動作処理
     """

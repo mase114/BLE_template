@@ -127,8 +127,10 @@ else:
 
 ble_advertising.py を同じディレクトリ内に保存。
 
-Switch Service UUID and Switch Characteristic UUID の値を変更。(他機体と同値禁止) Switch Service UUID and Switch Characteristic UUID の値を 
+Switch Service UUID and Switch Characteristic UUID の値を変更。`(他機体と同値禁止)`
 
-Peripheral 側と同値 動作させる場合、スイッチ入力確認をコメントにしておく
+Switch Service UUID and Switch Characteristic UUID の値をPeripheral側と同値 
+
+動作させる場合、スイッチ入力確認をコメントにしておく
 
 ## Author

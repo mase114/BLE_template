@@ -190,9 +190,9 @@ self.switch_pin をわかりやすくする為、変数を宣言する。 スイ
 
 AD コンバータを利用する場合
 
-`switch_state2 = round(float((self.switch_pin2.read_u16() / 65535) * 200),3)`
+~~`switch_state2 = round(float((self.switch_pin2.read_u16() / 65535) * 200),3)`~~
 
-Pico は 16bit であるので 65535 で AD 変換の値を MAX を 200 から 0 とし、小数点第三位まで表示させる。
+~~Pico は 16bit であるので 65535 で AD 変換の値を MAX を 200 から 0 とし、小数点第三位まで表示させる。~~
 
 ## データのフォーマット設定
 
